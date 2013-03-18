@@ -16,14 +16,14 @@ import scheduler.ycp.edu.shared.Schedule;
 public class GenerateView extends Composite implements ISubscriber{
 	
 	private Schedule model;
-	private SchedulerViewView schedulerViewView;
+	private SchedulerViewView schedulerView;
 
 	public GenerateView() {
 		FlowPanel panel = new FlowPanel();
 		
-		SchedulerViewView schedulerView = new SchedulerViewView();
+		schedulerView = new SchedulerViewView();
 		panel.add(schedulerView);
-		Schedule model = new Schedule();
+		model = new Schedule();
 		
 		schedulerView.setModel(model);
 		schedulerView.update();
@@ -52,7 +52,10 @@ public class GenerateView extends Composite implements ISubscriber{
 			@Override
 			public void onSuccess(Boolean result) {
 				Generate generate = new Generate();
-				for(int i = 0; i <   generate.getRequiredList().size(); i++){
+				
+				generate.setRequiredList(model.getRequiredList());
+				
+				for(int i = 0; i < generate.getRequiredList().size(); i++){
 					GWT.log(generate.getRequiredList().get(i).toString());
 				}	
 			}
