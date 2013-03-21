@@ -2,8 +2,6 @@ package scheduler.ycp.edu.server;
 
 import scheduler.ycp.edu.client.GenerateService;
 import scheduler.ycp.edu.shared.Schedule;
-
-import com.google.gwt.core.client.GWT;
 import com.google.gwt.user.server.rpc.RemoteServiceServlet;
 
 @SuppressWarnings("serial")
