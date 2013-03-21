@@ -10,7 +10,6 @@
 	<classpathentry kind="con" path="com.google.gwt.eclipse.core.GWT_CONTAINER/GWT (1)"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/Scheduler"/>
-	<classpathentry kind="con" path="com.google.appengine.eclipse.core.GAE_CONTAINER/App Engine (1)"/>
 	<classpathentry kind="lib" path="C:/Program Files (x86)/eclipse-juno/plugins/org.junit_4.10.0.v4_10_0_v20120426-0900/junit.jar"/>
 	<classpathentry kind="output" path="war/WEB-INF/classes"/>
 </classpath>
