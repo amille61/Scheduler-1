@@ -1,4 +1,11 @@
+<<<<<<< HEAD
 eclipse.preferences.version=1
 jarsExcludedFromWebInfLib=
 warSrcDir=war
 warSrcDirIsOutput=true
+=======
+eclipse.preferences.version=1
+jarsExcludedFromWebInfLib=
+warSrcDir=war
+warSrcDirIsOutput=true
+>>>>>>> 2355711bf7bab541d4e227b3d571569129e55c37

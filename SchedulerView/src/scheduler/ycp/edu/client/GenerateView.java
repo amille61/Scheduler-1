@@ -18,6 +18,7 @@ public class GenerateView extends Composite implements ISubscriber{
 	private Schedule model;
 	private SchedulerViewView schedulerView;
 
+
 	public GenerateView() {
 		FlowPanel panel = new FlowPanel();
 		

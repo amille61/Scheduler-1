@@ -59,4 +59,9 @@ public class FakeDatabase implements IDatabase {
 			return null;
 		}
 	}
+	
+	@Override
+	public Map<String, List<Course>> getDatabase() {
+		return coursesByName;
+	}
 }
