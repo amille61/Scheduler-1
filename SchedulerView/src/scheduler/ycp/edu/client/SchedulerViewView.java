@@ -74,7 +74,7 @@ public class SchedulerViewView extends Composite implements ISubscriber{
 				handleAddOptional();
 			}
 		});
-		buttonAddOptional.setText("Add");
+		buttonAddOptional.setText("Add >>>");
 		layoutPanel.add(buttonAddOptional);
 		layoutPanel.setWidgetLeftWidth(buttonAddOptional, 279.0, Unit.PX, 95.0, Unit.PX);
 		layoutPanel.setWidgetTopHeight(buttonAddOptional, 266.0, Unit.PX, 48.0, Unit.PX);
@@ -85,7 +85,7 @@ public class SchedulerViewView extends Composite implements ISubscriber{
 				handleRemoveOptional();
 			}
 		});
-		buttonRemoveOptional.setText("Remove");
+		buttonRemoveOptional.setText("<<< Remove");
 		layoutPanel.add(buttonRemoveOptional);
 		layoutPanel.setWidgetLeftWidth(buttonRemoveOptional, 279.0, Unit.PX, 95.0, Unit.PX);
 		layoutPanel.setWidgetTopHeight(buttonRemoveOptional, 337.0, Unit.PX, 48.0, Unit.PX);
@@ -156,6 +156,8 @@ public class SchedulerViewView extends Composite implements ISubscriber{
 		this.model = model;
 		this.model.subscribe(Schedule.Events.ADD_REQUIRED, this);
 		this.model.subscribe(Schedule.Events.ADD_OPTIONAL, this);
+		this.model.subscribe(Schedule.Events.REMOVE_REQUIRED, this);
+		this.model.subscribe(Schedule.Events.REMOVE_OPTIONAL, this);
 	}
 
 
