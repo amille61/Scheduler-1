@@ -7,7 +7,7 @@ import java.util.List;
 public class Generate extends Publisher implements ISubscriber, Serializable{
 	
 	private Schedule schedule;
-	private List <String> requiredList;
+	private List <CourseType> requiredList;
 	
 	public Generate(){
 		
@@ -24,11 +24,11 @@ public class Generate extends Publisher implements ISubscriber, Serializable{
 		return schedule;
 	}
 	
-	public void setRequiredList(List <String> requiredList){
+	public void setRequiredList(List <CourseType> requiredList){
 		this.requiredList = requiredList;
 	}
 	
-	public List <String> getRequiredList(){
+	public List <CourseType> getRequiredList(){
 		return requiredList;
 	}
 

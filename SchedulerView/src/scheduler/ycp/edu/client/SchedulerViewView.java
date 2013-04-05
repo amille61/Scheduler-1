@@ -1,7 +1,6 @@
 package scheduler.ycp.edu.client;
 
-import java.util.Collection;
-import scheduler.ycp.edu.shared.FakeDatabase;
+import scheduler.ycp.edu.shared.CourseType;
 import scheduler.ycp.edu.shared.Schedule;
 import scheduler.ycp.edu.shared.IPublisher;
 import scheduler.ycp.edu.shared.ISubscriber;
@@ -21,9 +20,7 @@ public class SchedulerViewView extends Composite implements ISubscriber{
 	
 	private ListBox requiredListBox;
 	private ListBox optionalListBox;
-	private ListBox courseListBox;
-	private String c;
-	FakeDatabase database;
+	private ListBox courseListBox;	
 	
 	public SchedulerViewView() {
 		
@@ -35,15 +32,7 @@ public class SchedulerViewView extends Composite implements ISubscriber{
 		layoutPanel.add(courseListBox);
 		layoutPanel.setWidgetLeftWidth(courseListBox, 37.0, Unit.PX, 185.0, Unit.PX);
 		layoutPanel.setWidgetTopHeight(courseListBox, 33.0, Unit.PX, 392.0, Unit.PX);
-		
-		Collection<String> tempCourseList = database.getDatabase().keySet();
-		for(int i = 0; i < tempCourseList.size(); i++){
-			if(tempCourseList.iterator().hasNext()){
-				courseListBox.addItem(tempCourseList.iterator().next());
-			}
-		}
-		
-		//courseListBox.setVisibleItemCount(5);
+		courseListBox.setVisibleItemCount(5);
 		
 		Button buttonAddRequired = new Button("New button");
 		buttonAddRequired.addClickHandler(new ClickHandler() {
@@ -132,7 +121,7 @@ public class SchedulerViewView extends Composite implements ISubscriber{
 		int index = courseListBox.getSelectedIndex();
 		if (index >= 0) {
 			String item = courseListBox.getItemText(index);
-			c = String.valueOf(item);
+			CourseType c = CourseType.valueOf(item);
 			model.addRequired(c);
 		}		
 	}
@@ -141,7 +130,7 @@ public class SchedulerViewView extends Composite implements ISubscriber{
 		int index = requiredListBox.getSelectedIndex();
 		if (index >= 0) {
 			String item = requiredListBox.getItemText(index);
-			c = String.valueOf(item);
+			CourseType c = CourseType.valueOf(item);
 			model.removeRequired(c);
 		}		
 	}
@@ -150,7 +139,7 @@ public class SchedulerViewView extends Composite implements ISubscriber{
 		int index = courseListBox.getSelectedIndex();
 		if (index >= 0) {
 			String item = courseListBox.getItemText(index);
-			c = String.valueOf(item);
+			CourseType c = CourseType.valueOf(item);
 			model.addOptional(c);
 		}		
 	}
@@ -159,7 +148,7 @@ public class SchedulerViewView extends Composite implements ISubscriber{
 		int index = optionalListBox.getSelectedIndex();
 		if (index >= 0) {
 			String item = optionalListBox.getItemText(index);
-			c = String.valueOf(item);
+			CourseType c = CourseType.valueOf(item);
 			model.removeOptional(c);
 		}		
 	}
@@ -176,15 +165,18 @@ public class SchedulerViewView extends Composite implements ISubscriber{
 		requiredListBox.clear();
 		optionalListBox.clear();
 		courseListBox.clear();
-		//for (String c : String.values()) {
+		for (CourseType c : CourseType.values()) {
 			if (model.getRequiredList().contains(c)) {
-				requiredListBox.addItem(c);
+				requiredListBox.addItem(c.toString());
+//			} else {
+//				courseListBox.addItem(c.toString());
+//			}
 			} else if (model.getOptionalList().contains(c)) {
-				optionalListBox.addItem(c);
+				optionalListBox.addItem(c.toString());
 			} else {
-				courseListBox.addItem(c);
+				courseListBox.addItem(c.toString());
 			}
-	//	}	
+		}	
 	}
 
 	@Override
