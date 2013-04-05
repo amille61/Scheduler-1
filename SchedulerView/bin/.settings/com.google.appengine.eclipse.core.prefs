@@ -1,0 +1,17 @@
+<<<<<<< HEAD
+eclipse.preferences.version=1
+filesCopiedToWebInfLib=
+gaeDatanucleusVersion=
+gaeHrdEnabled=true
+gaeIsEclipseDefaultInstPath=false
+googleCloudSqlEnabled=false
+localDevMySqlEnabled=true
+=======
+eclipse.preferences.version=1
+filesCopiedToWebInfLib=
+gaeDatanucleusVersion=
+gaeHrdEnabled=true
+gaeIsEclipseDefaultInstPath=false
+googleCloudSqlEnabled=false
+localDevMySqlEnabled=true
+>>>>>>> branch 'master' of git@github.com:rbare1/Scheduler.git

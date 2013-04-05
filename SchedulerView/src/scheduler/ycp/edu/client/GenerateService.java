@@ -11,4 +11,6 @@ public interface GenerateService extends RemoteService{
 	public Boolean hello(String message);
 	
 	public Boolean generateSchedule(Schedule schedule);
+	
+	public Boolean pullDatabase();
 }
