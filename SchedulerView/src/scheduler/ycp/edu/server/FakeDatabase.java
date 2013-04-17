@@ -1,4 +1,4 @@
-package scheduler.ycp.edu.shared;
+package scheduler.ycp.edu.server;
 
 import java.io.File;
 import java.io.IOException;
@@ -7,6 +7,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import scheduler.ycp.edu.shared.Course;
+import scheduler.ycp.edu.shared.IDatabase;
 import scheduler.ycp.edu.shared.ListRead;
 
 public class FakeDatabase implements IDatabase {

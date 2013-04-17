@@ -4,7 +4,6 @@ import java.io.File;
 import java.io.IOException;
 
 import scheduler.ycp.edu.client.GenerateService;
-import scheduler.ycp.edu.shared.FakeDatabase;
 import scheduler.ycp.edu.shared.Schedule;
 import com.google.gwt.user.server.rpc.RemoteServiceServlet;
 
@@ -38,5 +37,7 @@ public class ScheduleServiceImpl extends RemoteServiceServlet implements Generat
 		}
 		return true;
 	}
+	
+	
 
 }
