@@ -1,4 +1,4 @@
-package scheduler.ycp.edu.shared;
+package scheduler.ycp.edu.server;
 
 import java.io.BufferedReader;
 import java.io.File;

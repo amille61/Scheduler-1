@@ -6,9 +6,10 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import scheduler.ycp.edu.shared.Course;
-import scheduler.ycp.edu.shared.IDatabase;
-import scheduler.ycp.edu.shared.ListRead;
+import scheduler.ycp.edu.server.Course;
+import scheduler.ycp.edu.server.IDatabase;
+import scheduler.ycp.edu.server.ListRead;
+
 
 public class FakeDatabase implements IDatabase {
 	private Map<String, List<Course>> coursesByName;

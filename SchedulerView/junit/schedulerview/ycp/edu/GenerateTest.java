@@ -1,4 +1,4 @@
-package scheduler.ycp.edu;
+package schedulerview.ycp.edu;
 
 import static org.junit.Assert.*;
 
@@ -8,8 +8,8 @@ import java.util.List;
 import org.junit.Before;
 import org.junit.Test;
 
-import scheduler.ycp.edu.shared.Course;
-import scheduler.ycp.edu.shared.Generate;
+import scheduler.ycp.edu.server.Course;
+import scheduler.ycp.edu.server.Generate;
 
 public class GenerateTest {
 

@@ -4,7 +4,6 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-import scheduler.ycp.edu.shared.IDatabase;
 
 public class DBUtil {
 	private static final IDatabase theInstance = new DerbyDatabase();

@@ -1,4 +1,4 @@
-package scheduler.ycp.edu;
+package schedulerview.ycp.edu;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -7,11 +7,10 @@ import org.junit.Before;
 import org.junit.Test;
 import static org.junit.Assert.*;
 import org.junit.Test;
-import scheduler.ycp.edu.shared.Course;
-import scheduler.ycp.edu.shared.ListRead;
 
-import scheduler.ycp.edu.shared.Course;
-import scheduler.ycp.edu.shared.ListRead;
+import scheduler.ycp.edu.server.Course;
+import scheduler.ycp.edu.server.ListRead;
+
 
 public class ListReadTest {
 	private ListRead list;

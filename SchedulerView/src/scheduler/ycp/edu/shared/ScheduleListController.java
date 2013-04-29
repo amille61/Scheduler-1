@@ -4,9 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ScheduleListController {
-	public List <CourseType> getRequired(Schedule schedule){
-		List <CourseType> requiredList = new ArrayList<CourseType>();
-		CourseType course;
+	public List<String> getRequired(Schedule schedule){
+		List <String> requiredList = new ArrayList<String>();
+		String course;
 		
 		for(int i = 0; i < schedule.getRequiredList().size(); i++){
 			course = schedule.getRequiredList().get(i);
