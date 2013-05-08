@@ -10,6 +10,7 @@
     <servlet-name>CreateDatabaseImpl</servlet-name>
     <url-pattern>/schedulerview/keylist</url-pattern>
   </servlet-mapping>
+  
   <servlet>
     <servlet-name>ScheduleServiceImpl</servlet-name>
     <servlet-class>scheduler.ycp.edu.server.ScheduleServiceImpl</servlet-class>
@@ -17,6 +18,15 @@
   <servlet-mapping>
     <servlet-name>ScheduleServiceImpl</servlet-name>
     <url-pattern>/schedulerview/generate</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>Schedules</servlet-name>
+    <servlet-class>edu.ycp.cs320.pizza.server.Schedules</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Schedules</servlet-name>
+    <url-pattern>/Schedules/*</url-pattern>
   </servlet-mapping>
   
   <!-- Default page to serve -->

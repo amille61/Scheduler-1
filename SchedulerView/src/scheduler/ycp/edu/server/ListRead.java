@@ -8,6 +8,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.StringTokenizer;
 
+import scheduler.ycp.edu.shared.Course;
+
 public class ListRead {
 
 	File fileName;

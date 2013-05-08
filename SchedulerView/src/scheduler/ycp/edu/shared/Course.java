@@ -1,7 +1,9 @@
-package scheduler.ycp.edu.server;
+package scheduler.ycp.edu.shared;
+
+import java.io.Serializable;
 
 
-public class Course {
+public class Course implements Serializable {
 	private String num;
 	private int CRNNum;
 	private String name;
@@ -11,6 +13,10 @@ public class Course {
 	private double endTime;
 	private String instructor;
 	private String room;
+	
+	public Course() {
+		
+	}
 	
 	public Course(String num2, int CRNNum2, String name2, int credit2, String days2, double startTime2, double endTime2, String instructor2, String room2) {
 		setNum(num2);

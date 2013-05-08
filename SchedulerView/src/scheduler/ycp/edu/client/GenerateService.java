@@ -1,5 +1,8 @@
 package scheduler.ycp.edu.client;
 
+import java.util.ArrayList;
+
+import scheduler.ycp.edu.shared.Course;
 import scheduler.ycp.edu.shared.Schedule;
 
 import com.google.gwt.user.client.rpc.RemoteService;
@@ -9,6 +12,7 @@ import com.google.gwt.user.client.rpc.RemoteServiceRelativePath;
 public interface GenerateService extends RemoteService{
 
 	public Boolean hello(String message);
-	
-	public Boolean generateSchedule(Schedule schedule);
+
+	Boolean generateSchedule(Schedule schedule);
+
 }

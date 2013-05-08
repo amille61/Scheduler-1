@@ -6,7 +6,7 @@ import com.google.gwt.user.client.ui.FlowPanel;
 import com.google.gwt.user.client.ui.RootLayoutPanel;
 
 
-import scheduler.ycp.edu.server.Generate;
+import scheduler.ycp.edu.shared.Generate;
 import scheduler.ycp.edu.shared.GenerateInit;
 import scheduler.ycp.edu.shared.Schedule; 
 
@@ -26,10 +26,13 @@ public class SchedulerView implements EntryPoint {
 //		schedulerView.setModel(model);
 //		schedulerView.update();
 		
+		Schedule schedule = new Schedule();
+		
 		GenerateView generateView = new GenerateView();
+		generateView.setModel(schedule);
 
-		GenerateInit generate = new GenerateInit();
-		generate.setSchedule(new Schedule());
+//		GenerateInit generate = new GenerateInit();
+//		generate.setSchedule(new Schedule());
 
 		//generateView.setModel(generate);
 

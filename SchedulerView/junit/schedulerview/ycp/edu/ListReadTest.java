@@ -8,8 +8,8 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 import org.junit.Test;
 
-import scheduler.ycp.edu.server.Course;
 import scheduler.ycp.edu.server.ListRead;
+import scheduler.ycp.edu.shared.Course;
 
 
 public class ListReadTest {

@@ -8,8 +8,8 @@ import java.util.List;
 import org.junit.Before;
 import org.junit.Test;
 
-import scheduler.ycp.edu.server.Course;
-import scheduler.ycp.edu.server.Generate;
+import scheduler.ycp.edu.shared.Course;
+import scheduler.ycp.edu.shared.Generate;
 
 public class GenerateTest {
 

@@ -4,6 +4,8 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.google.gwt.core.shared.GWT;
+
 @SuppressWarnings("serial")
 public class Schedule extends Publisher implements Serializable{
 	public enum Events{
@@ -14,6 +16,7 @@ public class Schedule extends Publisher implements Serializable{
 	}
 	private List<String> requiredList;
 	private List<String> optionalList;
+	GenerateInit generate = new GenerateInit();
 	
 	public Schedule(){
 		this.requiredList = new ArrayList<String>();

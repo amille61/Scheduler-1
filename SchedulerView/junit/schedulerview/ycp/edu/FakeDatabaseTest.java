@@ -5,8 +5,8 @@ import java.io.File;
 import org.junit.Before;
 import org.junit.Test;
 
-import scheduler.ycp.edu.server.Course;
 import scheduler.ycp.edu.server.FakeDatabase;
+import scheduler.ycp.edu.shared.Course;
 
 public class FakeDatabaseTest {
 

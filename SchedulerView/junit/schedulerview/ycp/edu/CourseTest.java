@@ -5,7 +5,7 @@ import static org.junit.Assert.*;
 import org.junit.Before;
 import org.junit.Test;
 
-import scheduler.ycp.edu.server.Course;
+import scheduler.ycp.edu.shared.Course;
 
 
 public class CourseTest {

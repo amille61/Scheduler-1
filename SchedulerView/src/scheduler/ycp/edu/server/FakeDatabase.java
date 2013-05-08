@@ -2,17 +2,19 @@ package scheduler.ycp.edu.server;
 
 import java.io.File;
 import java.io.IOException;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import scheduler.ycp.edu.server.Course;
 import scheduler.ycp.edu.server.IDatabase;
 import scheduler.ycp.edu.server.ListRead;
 
 
+import scheduler.ycp.edu.shared.Course;
+
 public class FakeDatabase implements IDatabase {
-	private Map<String, List<Course>> coursesByName;
+	private Map<String, ArrayList<Course>> coursesByName;
 	private ListRead list;
 	private List<Course> courseList;
 
@@ -21,12 +23,12 @@ public class FakeDatabase implements IDatabase {
 		list = new ListRead(fileName);
 		courseList = list.Read(); // load courses from CSV file into Array List
 
-		coursesByName = new HashMap<String, List<Course>>();
+		coursesByName = new HashMap<String, ArrayList<Course>>();
 
 		Course course = new Course(null, 0, null, 0, null, 0, 0, null, null);
 
 		String prevCourseName = "";
-		List<Course> tempList = new ArrayList<Course>();
+		ArrayList<Course> tempList = new ArrayList<Course>();
 		for (int i = 0; i < courseList.size(); i++) {
 			course = courseList.get(i); // get next class
 			if (i == 0) {
@@ -54,16 +56,21 @@ public class FakeDatabase implements IDatabase {
 	}
 
 	@Override
-	public List<Course> findCourse(String courseName) {
+	public ArrayList<Course> findCourse(String courseName) {
 		if (coursesByName.containsKey(courseName)) {
 			return coursesByName.get(courseName);
 		} else {
 			return null;
 		}
 	}
-	
+
 	@Override
-	public Map<String, List<Course>> getDatabase() {
+	public ArrayList<Course> getSchedule(int scheduleID) throws SQLException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+	public Map<String, ArrayList<Course>> getDatabase() {
 		return coursesByName;
 	}
 }
